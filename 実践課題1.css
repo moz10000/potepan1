@@ -235,8 +235,11 @@ li {
 
 
     .Header {
-        height: 55px;
+        position: fixed;
+        height: 35px;
         padding-top: 0;
+        z-index: 100;
+        background-color: #ffffff;
     }
     .HeaderNav {
     }
@@ -264,6 +267,40 @@ li {
         background-color: #f79214;
     }
 
+    .HamburgerMenu {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+        
+    }
+
+    .HamburgerMenu span,
+    .HamburgerMenu span::before,
+    .HamburgerMenu span::after {
+        content: '';
+        display: block;
+        height: 3.5px;
+        width: 32px;
+        border-radius: 3px;
+        background-color: #555454;
+        position: absolute;
+    }
+
+    .HamburgerMenu span::before {
+        bottom: 10px;
+    }
+
+    .HamburgerMenu span::after {
+        top: 10px;
+    }
+
+
 }
 
 
@@ -274,7 +311,7 @@ li {
         justify-content: space-between;
         width: 100%;
         position: absolute;
-        top: 70px;
+        top: 55px;
     }
 
     .FirstViewContent {
@@ -342,5 +379,10 @@ li {
         margin: 20px auto;
     }
 
+    
+
 
 }
+
+
+
