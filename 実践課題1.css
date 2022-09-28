@@ -1,0 +1,119 @@
+body {
+    color: #333;
+    font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.Header {
+    width: 100%;
+    position: absolute;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header {
+    display: block;
+}
+
+.HeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 36px;
+    max-width: 100%;
+    position: relative;
+}
+
+.HeaderLogo {
+    transition: opacity 0.2s;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.HeaderLogo__image--pc {
+    display: block;
+    height: 20px;
+    width: auto;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+.HeaderContainer>*:last-child {
+    display: inline-flex;
+}
+
+@media screen and (max-width: 1000px)
+.HeaderNavList {
+    overflow-y: scroll;
+    position: fixed;
+    top: 60px;
+    left: 100%;
+    width: 100%;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 75px;
+    transition: transform 0.5s;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0);
+    height: 100%;
+} 
+
+.HeaderNavList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+}
+
+.HeaderNavListItem {
+    margin-right: 45px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.HeaderNavListItem__link {
+    display: block;
+}
+
+.HeaderNavListItem__link span:first-child {
+    font-family: 'Lato',sans-serif;
+}
+
+.HeaderNavListItem__link span {
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    font-size: 12px;
+}
+
+.HeaderNavListItem__button {
+    align-items: center;
+    background-color: #f79214;
+    border: none;
+    border-radius: 38px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 700;
+    height: 64px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    height: 40px;
+    padding: 0 10px;
+    color: white;
+}
