@@ -300,6 +300,10 @@ li {
         background-image: none;
     }
 
+    .FirstViewContent__buttons {
+        margin-bottom: 25px;
+    }
+
     .FirstViewContent__buttons a:last-child {
         display: none;
     }
