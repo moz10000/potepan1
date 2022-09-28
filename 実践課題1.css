@@ -1,6 +1,5 @@
 body {
     color: #333;
-    font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
     font-size: 14px;
     font-weight: 500;
 }
@@ -24,13 +23,14 @@ header {
     position: relative;
 }
 
-.HeaderLogo {
-    transition: opacity 0.2s;
-}
-
 a {
     color: #333;
     text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.8;
+    transition: 0.4s;
 }
 
 .HeaderLogo__image--pc {
@@ -48,22 +48,6 @@ img {
     display: inline-flex;
 }
 
-@media screen and (max-width: 1000px)
-.HeaderNavList {
-    overflow-y: scroll;
-    position: fixed;
-    top: 60px;
-    left: 100%;
-    width: 100%;
-    display: block;
-    padding-top: 20px;
-    padding-bottom: 75px;
-    transition: transform 0.5s;
-    z-index: 99;
-    background-color: rgba(0, 0, 0, 0);
-    height: 100%;
-} 
-
 .HeaderNavList {
     display: flex;
     align-items: center;
@@ -80,7 +64,7 @@ ul {
 
 li {
     display: list-item;
-    text-align: -webkit-match-parent;
+    
 }
 
 .HeaderNavListItem__link {
@@ -103,17 +87,256 @@ li {
     background-color: #f79214;
     border: none;
     border-radius: 38px;
-    cursor: pointer;
     display: flex;
-    flex-direction: column;
-    font-size: 16px;
     font-weight: 700;
-    height: 64px;
     justify-content: center;
-    text-align: center;
     width: 100%;
     font-size: 12px;
     height: 40px;
     padding: 0 10px;
     color: white;
+}
+
+.FirstView {
+    background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    padding-top: 100px;
+    padding-bottom: 28px;
+}
+
+.FirstView__responsive {
+    display: none;
+    position: absolute;
+}
+
+
+.FirstView__container {
+    max-width: 1150px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: fit-content;
+}
+
+.FirstView__main-image{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.FirstViewContent__title {
+    font-weight: 800;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.FirstViewContent__images img{
+    width: 18%;
+    
+}
+
+.FirstViewContent__images img:nth-child(2) {
+    width: 25%;
+
+}
+
+.FirstViewContent__buttons {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.FirstViewContent__buttons a{
+    padding: 25px ;
+    background-color: #f79214;
+    width: 100%;
+    color: white;
+    border: #333;
+    border-radius: 60px;
+    font-size: 18px;    
+    font-weight: 600;
+}
+
+.FirstViewContent__buttons a:last-child {
+    background-color: white;
+    color: #333;
+    border: 1px solid rgb(218, 218, 218);
+    margin-left: 20px;
+}
+
+.FirstViewCaption {
+    font-size: 12px;
+    color: rgb(145, 145, 145);
+
+}
+
+.FirstViewCaption a {
+    color: rgb(145, 145, 145);
+}
+
+.AboutWrapper {
+    background-color: #f79214;
+    padding: 44px 0;
+}
+
+.About {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    max-width: 1140px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.AboutVideo {
+    width: 50%;
+    
+}
+
+.About__title {
+    color: aliceblue;
+    margin-left: 40px;
+}
+
+.About__title h2 {
+    font-size: 40px;
+}
+
+.About__title p {
+    font-size: 19px;
+    margin: 30px 0;
+}
+
+.About__title a {
+    font-size: 19px;
+    color: aliceblue;
+}
+
+
+@media screen and (max-width: 1100px){
+    .HeaderLogo__image--pc {
+        display: flex;
+        justify-content: flex-start;
+        height: 16px;
+        right: 210px;
+        margin-top: 20px;
+    }
+
+
+
+    .Header {
+        height: 55px;
+        padding-top: 0;
+    }
+    .HeaderNav {
+    }
+    .HeaderNavList {
+        position: fixed;
+        width: 100%;
+        right: 1000px;
+        display: flex;
+        flex-direction: column;
+        font-size: 50px;
+        transition: all 0.3s;
+    }
+    .HeaderNavListItem__link span{
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .HeaderNavListItem__link span:last-child {
+        font-size: 14px;
+        color: #f79214;
+        margin-bottom: 30px;
+    }
+
+    input[type="checkbox"]:checked ~ .HeaderNavList {
+        right: 100px;
+        background-color: #f79214;
+    }
+
+}
+
+
+@media screen and (max-width: 750px) {
+    
+    .FirstView__responsive {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+    }
+
+    .FirstViewContent {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .FirstViewContent__images {
+        display: flex;
+        justify-content: center;
+    }
+
+    .FirstViewContent__images img {
+        width: 25%;
+    }
+
+    .FirstViewContent__images img:nth-child(2) {
+        width: 40%;
+    }
+
+    .FirstView {
+        background-image: none;
+    }
+
+    .FirstViewContent__buttons a:last-child {
+        display: none;
+    }
+
+    .FirstViewContent__buttons a:first-child{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .FirstView__container {
+        margin-top: 60%;
+        padding: 0 20px;
+    }
+    .FirstViewContent__title {
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .AboutWrapper {
+        padding: 35px 0;
+    }
+
+    .About {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .AboutVideo {
+        width: 100%;
+    }
+
+    .About__title {
+        margin: 20px auto;
+    }
+
+
 }

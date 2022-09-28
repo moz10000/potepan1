@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../../hello_app"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "hello_app"
+	}
+}
